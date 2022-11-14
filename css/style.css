@@ -63,8 +63,8 @@ figure.home-photo:before {
   content: "";
   background: #ffffff;
   position: absolute;
-  -webkit-transition: all 0.3s ease-in-out;
-  transition: all 0.3s ease-in-out;
+  -webkit-transition: all 0.7s ease-in;
+  transition: all 0.5s ease-in;
   -webkit-transform: rotate(110deg) translateY(-50%);
   transform: rotate(110deg) translateY(-50%);
 }

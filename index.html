@@ -39,47 +39,43 @@
 
 <!-- HEADER -->
 <header id="header-index">
-    
     <!-- Navbar  -->
-    
     <section>
         <nav class="navbar navbar-expand-lg  navbar-dark">
             <div class="container-fluid">
-                <a class="navbar-brand" data-aos="zoom-in" class="nav-link"  href="./index.html">BARBI MARINELLI</a>
+                <a class="navbar-brand" class="nav-link"  href="../index.html">BARBI MARINELLI</a>
                 <!-- Hamburguer Btn -->
-                <button class="navbar-toggler navbar-toggler-icon" data-aos="zoom-in" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation"></button>
+                <button class="navbar-toggler navbar-toggler-icon" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation"></button>
                 
-                <div class="collapse navbar-collapse justify-content-end px-5" class="navbarNavDropdown">
-                <ul class="navbar-nav d-flex" data-aos="fade-left">
+                <div class="collapse navbar-collapse justify-content-end" id="navbarNavDropdown">
+                <ul class="navbar-nav d-flex">
                     <li class="nav-item">
-                        <a class="nav-link" aria-current="page" href="./pages/about.html">About</a>
+                        <a class="nav-link active" aria-current="page" href="./about.html">About</a>
                     </li>
                 <!-- Dropdown Menu -->
                     <li class="nav-item dropdown">
-                        <a class="nav-link" dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        <a class="nav-link" dropdown-toggle" href="#" class="bg-dark" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                         Gallery
                         </a>
-                        <ul class="dropdown-menu">
-                            <li><a class="dropdown-item link-light nav-link active"  href="./pages/music.html">Music</a></li>
-                            <li><a class="dropdown-item link-light nav-link active" href="./pages/dance.html">Dance</a></li>
+                        <ul class="dropdown-menu bg-dark">
+                            <li><a class="dropdown-item link-light nav-link active bg-dark"  href="./music.html">Music</a></li>
+                            <li><a class="dropdown-item link-light nav-link active bg-dark" href="./dance.html">Dance</a></li>
                         </ul>
                     </li>
                 <!-- Dropdown Menu end -->
                     <li class="nav-item">
-                        <a class="nav-link" href="./pages/upcomingEvents.html">Upcoming Events</a>
+                        <a class="nav-link" href="./upcomingEvents.html">Upcoming Events</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="./pages/contact.html">Contact</a>
+                        <a class="nav-link" href="./contact.html">Contact</a>
                     </li>                
                 </ul>
                 </div>
             </div>
         </nav>
     </section>
-</header>
-
-    <!-- Navbar End -->
-
+    </header>
+        <!-- Navbar End -->
 <!-- MAIN -->
 
 <main class="main">
@@ -88,9 +84,15 @@
             <figure class="home-photo purple justify-content-center">
                 <img src="./img/home-img/barbiDance.jpg" alt="Barbi Marinelli"/>
                 <figcaption>
-                    <h2>BARBI <span> MARINELLI</span></h2>
+                    <h2>
+                        <span>MUSIC
+                        </span>
+                        <span>DANCE
+                            <a href="./pages/dance.html"></a>
+                        </span>
+                    </h2>
                 </figcaption>
-            <a href="./pages/dance.html"></a>
+            
             </figure>
         </div>
     </section>
