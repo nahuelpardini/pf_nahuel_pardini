@@ -36,7 +36,7 @@ figure.home-photo figcaption {
   left: 0;
   bottom: 0;
   right: 0;
-  letter-spacing: 0.2rem;
+  letter-spacing: 0.2 0.5rem;
 }
 figure.home-photo h2 {
   position: absolute;
@@ -63,8 +63,8 @@ figure.home-photo:before {
   content: "";
   background: #ffffff;
   position: absolute;
-  -webkit-transition: all 0.7s ease-in;
-  transition: all 0.5s ease-in;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
   -webkit-transform: rotate(110deg) translateY(-50%);
   transform: rotate(110deg) translateY(-50%);
 }
@@ -129,7 +129,7 @@ figure.home-photo.hover:before {
   width: 0px;
   height: 2px;
   background: #462d68;
-  transition: 0.5s;
+  transition: 1s;
 }
 .navbar-brand:hover::after {
   width: 100%;
@@ -141,7 +141,7 @@ figure.home-photo.hover:before {
   width: 0px;
   height: 2px;
   background: #462d68;
-  transition: 0.5s;
+  transition: 1s;
 }
 .nav-item:hover::after {
   width: 100%;
@@ -153,7 +153,7 @@ figure.home-photo.hover:before {
   width: 0px;
   height: 2px;
   background: #462d68;
-  transition: 0.5s;
+  transition: 1;
 }
 .dropdown-item:hover::after {
   width: 100%;
