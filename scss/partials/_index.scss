@@ -1,114 +1,127 @@
-$color_1: #ffffff;
-$color-purple: #3c2572;
-$font-family_1: 'Michroma', regular;
+$color_1: #2d2d2d;
+$color_2: #1a1a1a;
+$color_3: #fff;
+$font-family_1: 'Raleway', sans-serif;
 
-figure.home-photo {
+@import "https://fonts.googleapis.com/css?family=Raleway";
+* {
+	margin: 0;
+	padding: 0;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	&:before {
+		margin: 0;
+		padding: 0;
+		-webkit-box-sizing: border-box;
+		-moz-box-sizing: border-box;
+		box-sizing: border-box;
+	}
+	&:after {
+		margin: 0;
+		padding: 0;
+		-webkit-box-sizing: border-box;
+		-moz-box-sizing: border-box;
+		box-sizing: border-box;
+	}
+}
+body {
+	background: #f9f9f9;
+	font-size: 16px;
 	font-family: $font-family_1;
-	position: relative;
-	overflow: hidden;
-	margin: 10px;
-	min-width: 120px;
-	max-width: 1250px;
-	max-height: 920px;
-	width: 100%;
-	background: #000000;
+}
+.main-title {
 	color: $color_1;
 	text-align: center;
-	box-shadow: 0 0 7px rgba(0, 0, 0, 0.15);
-	* {
-		box-sizing: border-box;
-		box-sizing: border-box;
-		transition: all 0.4s ease-in-out;
-		transition: all 0.4s ease-in-out;
+	text-transform: capitalize;
+	padding: 0.7em 0;
+}
+.container {
+	padding: 1em 0;
+	float: left;
+	width: 50%;
+	.title {
+		color: $color_2;
+		text-align: center;
+		margin-bottom: 10px;
 	}
-	img {
-		max-width: 100%;
-		position: relative;
-		opacity: 0.4;
-	}
-	figcaption {
+}
+.content {
+	position: relative;
+	width: 100%;
+	max-width: 100%;
+	margin: auto;
+	overflow: hidden;
+	.content-overlay {
+		background: rgba(0,0,0,0.7);
 		position: absolute;
-		top: 0;
-		left: 0;
-		bottom: 0;
-		right: 0;
-        letter-spacing: .3rem;
-	}
-	h2 {
-		position: absolute;
-		left: 40px;
-		right: 40px;
-		display: inline-block;
-		background: #000000;
-		transform: skew(-10deg) rotate(-10deg) translate(0, -50%);
-		transform: skew(-10deg) rotate(-10deg) translate(0, -50%);
-		padding: 12px 5px;
-		margin: 0;
-		top: 50%;
-		text-transform: uppercase;
-		font-weight: 400;
-		.sign{
-		font-weight: 800;
-		}
-	}
-	&:before {
 		height: 100%;
 		width: 100%;
-		top: 0;
 		left: 0;
-		content: '';
-		background: #ffffff;
-		position: absolute;
-		transition: all 0.3s ease-in-out;
-		transition: all 0.3s ease-in-out;
-		transform: rotate(110deg) translateY(-50%);
-		transform: rotate(110deg) translateY(-50%);
-	}
-	a {
-		left: 0;
-		right: 0;
 		top: 0;
 		bottom: 0;
-		position: absolute;
-		z-index: 1;
+		right: 0;
+		opacity: 0;
+		-webkit-transition: all 0.7s ease-in-out 0s;
+		-moz-transition: all 0.7s ease-in-out 0s;
+		transition: all 0.7s ease-in-out 0s;
 	}
 	&:hover {
-		img {
+		.content-overlay {
 			opacity: 1;
-			transform: scale(1.1);
-			transform: scale(1.1);
 		}
-		h2 {
-			transform: skew(-10deg) rotate(-10deg) translate(-150%, -50%);
-			transform: skew(-10deg) rotate(-10deg) translate(-150%, -50%);
-		}
-		&:before {
-			transform: rotate(110deg) translateY(-150%);
-			transform: rotate(110deg) translateY(-150%);
+		.content-details {
+			top: 50%;
+			left: 50%;
+			opacity: 1;
 		}
 	}
 }
-figure.home-photo.purple {
-	background: #4a2475bd;
-	h2 {
-		background: #321553cb;
+.content-image {
+	width: 100%;
+}
+.content-details {
+	position: absolute;
+	text-align: center;
+	padding-left: 1em;
+	padding-right: 1em;
+	width: 100%;
+	top: 50%;
+	left: 50%;
+	opacity: 0;
+	-webkit-transform: translate(-50%, -50%);
+	-moz-transform: translate(-50%, -50%);
+	transform: translate(-50%, -50%);
+	-webkit-transition: all 0.5s ease-in-out 0s;
+	-moz-transition: all 0.5s ease-in-out 0s;
+	transition: all 0.5s ease-in-out 0s;
+	h3 {
+		color: $color_3;
+		font-weight: 500;
+		letter-spacing: 0.15em;
+		margin-bottom: 0.5em;
+		text-transform: uppercase;
+	}
+	p {
+		color: $color_3;
+		font-size: 0.8em;
 	}
 }
-figure.home-photo.hover {
-	img {
-		opacity: 1;
-		transform: scale(1.1);
-		transform: scale(1.1);
-	}
-	h2 {
-		transform: skew(-10deg) rotate(-10deg) translate(-150%, -50%);
-		transform: skew(-10deg) rotate(-10deg) translate(-150%, -50%);
-	}
-	&:before {
-		transform: rotate(110deg) translateY(-150%);
-		transform: rotate(110deg) translateY(-150%);
+.fadeIn-bottom {
+	top: 80%;
+}
+@media screen and (max-width: 640px) {
+	.container {
+		display: block;
+		width: 100%;
 	}
 }
+@media screen and (min-width: 900px) {
+	.container {
+		width: 33.33333%;
+	}
+}
+
 
 .home-news{
     h2{
