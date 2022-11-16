@@ -8,7 +8,6 @@ $background-light-grey: #484949;
 
 
 .footer {
-	width: 100%;
 	display: inline-block;
 	background: #ccc;
 	height: 60vh;
@@ -16,6 +15,10 @@ $background-light-grey: #484949;
 	font-size: 15px;
 	font-weight: 700;
 	text-decoration: underline;
+	position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
 }
 .footer-distribution {
 	background-color: $background-dark-grey;

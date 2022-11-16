@@ -2,7 +2,6 @@
 body {
   padding: 0px;
   margin: 0px;
-  min-height: 100vh;
 }
 
 figure.home-photo {
@@ -36,7 +35,7 @@ figure.home-photo figcaption {
   left: 0;
   bottom: 0;
   right: 0;
-  letter-spacing: 0.2 0.5rem;
+  letter-spacing: 0.3rem;
 }
 figure.home-photo h2 {
   position: absolute;
@@ -52,7 +51,7 @@ figure.home-photo h2 {
   text-transform: uppercase;
   font-weight: 400;
 }
-figure.home-photo h2 span {
+figure.home-photo h2 .sign {
   font-weight: 800;
 }
 figure.home-photo:before {
@@ -192,7 +191,6 @@ figure.home-photo.hover:before {
 }
 
 .footer {
-  width: 100%;
   display: inline-block;
   background: #ccc;
   height: 60vh;
@@ -200,6 +198,10 @@ figure.home-photo.hover:before {
   font-size: 15px;
   font-weight: 700;
   text-decoration: underline;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
 }
 
 .footer-distribution {

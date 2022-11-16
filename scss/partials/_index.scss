@@ -32,7 +32,7 @@ figure.home-photo {
 		left: 0;
 		bottom: 0;
 		right: 0;
-        letter-spacing: .2.5rem;
+        letter-spacing: .3rem;
 	}
 	h2 {
 		position: absolute;
@@ -47,7 +47,7 @@ figure.home-photo {
 		top: 50%;
 		text-transform: uppercase;
 		font-weight: 400;
-		span {
+		.sign{
 		font-weight: 800;
 		}
 	}
