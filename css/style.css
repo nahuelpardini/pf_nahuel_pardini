@@ -81,6 +81,10 @@ body {
   opacity: 1;
 }
 
+.content-title {
+  font-size: 70px;
+}
+
 .content-image {
   width: 100%;
 }
