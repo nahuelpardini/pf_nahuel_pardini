@@ -1,13 +1,22 @@
 $font-family_1: 'Michroma', sans-serif;
 
 /* Dance Videos */
-/* Dance Videos End */
-.dance_videos_title {
+
+.dance-videos-title {
 	text-decoration-color: #ffffff;
 	font-size: 25px;
-	margin: 2.5rem 1rem;
+	margin: 2rem 3rem;
 	font-family: $font-family_1;
 }
+
+.dance-photos-title {
+	text-decoration-color: #ffffff;
+	font-size: 25px;
+	margin: 2rem 3rem;
+	font-family: $font-family_1;
+}
+
+
 .responsiveContent {
 	position: relative;
 	height: 0;
@@ -50,7 +59,7 @@ $font-family_1: 'Michroma', sans-serif;
 		height: 100%;
 	}
 }
-
+/* Dance Videos End */
 
 
 
@@ -82,7 +91,7 @@ $font-family_1: 'Michroma', sans-serif;
     // Styling
     
     section {
-        background: #F4F4F4;
+        background: #ffffff;
         padding: 50px 0;
     }
     
