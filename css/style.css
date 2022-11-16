@@ -17,12 +17,12 @@ figure.home-photo {
   background: #000000;
   color: #ffffff;
   text-align: center;
-  box-shadow: 0 0 5px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 0 7px rgba(0, 0, 0, 0.15);
 }
 figure.home-photo * {
-  -webkit-box-sizing: border-box;
   box-sizing: border-box;
-  -webkit-transition: all 0.4s ease-in-out;
+  box-sizing: border-box;
+  transition: all 0.4s ease-in-out;
   transition: all 0.4s ease-in-out;
 }
 figure.home-photo img {
@@ -44,7 +44,7 @@ figure.home-photo h2 {
   right: 40px;
   display: inline-block;
   background: #000000;
-  -webkit-transform: skew(-10deg) rotate(-10deg) translate(0, -50%);
+  transform: skew(-10deg) rotate(-10deg) translate(0, -50%);
   transform: skew(-10deg) rotate(-10deg) translate(0, -50%);
   padding: 12px 5px;
   margin: 0;
@@ -63,9 +63,9 @@ figure.home-photo:before {
   content: "";
   background: #ffffff;
   position: absolute;
-  -webkit-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
-  -webkit-transform: rotate(110deg) translateY(-50%);
+  transition: all 0.3s ease-in-out;
+  transform: rotate(110deg) translateY(-50%);
   transform: rotate(110deg) translateY(-50%);
 }
 figure.home-photo a {
@@ -78,36 +78,36 @@ figure.home-photo a {
 }
 figure.home-photo:hover img {
   opacity: 1;
-  -webkit-transform: scale(1.1);
+  transform: scale(1.1);
   transform: scale(1.1);
 }
 figure.home-photo:hover h2 {
-  -webkit-transform: skew(-10deg) rotate(-10deg) translate(-150%, -50%);
+  transform: skew(-10deg) rotate(-10deg) translate(-150%, -50%);
   transform: skew(-10deg) rotate(-10deg) translate(-150%, -50%);
 }
 figure.home-photo:hover:before {
-  -webkit-transform: rotate(110deg) translateY(-150%);
+  transform: rotate(110deg) translateY(-150%);
   transform: rotate(110deg) translateY(-150%);
 }
 
 figure.home-photo.purple {
-  background: #4a2475;
+  background: rgba(74, 36, 117, 0.7411764706);
 }
 figure.home-photo.purple h2 {
-  background: #321553;
+  background: rgba(50, 21, 83, 0.7960784314);
 }
 
 figure.home-photo.hover img {
   opacity: 1;
-  -webkit-transform: scale(1.1);
+  transform: scale(1.1);
   transform: scale(1.1);
 }
 figure.home-photo.hover h2 {
-  -webkit-transform: skew(-10deg) rotate(-10deg) translate(-150%, -50%);
+  transform: skew(-10deg) rotate(-10deg) translate(-150%, -50%);
   transform: skew(-10deg) rotate(-10deg) translate(-150%, -50%);
 }
 figure.home-photo.hover:before {
-  -webkit-transform: rotate(110deg) translateY(-150%);
+  transform: rotate(110deg) translateY(-150%);
   transform: rotate(110deg) translateY(-150%);
 }
 
@@ -168,6 +168,9 @@ figure.home-photo.hover:before {
 
 .navbar-dark {
   font-family: "Michroma", regular;
+}
+.navbar-dark .navbar-nav .active {
+  background-color: #462d68;
 }
 .navbar-dark .navbar-nav .active .nav-link {
   color: color-underline;
