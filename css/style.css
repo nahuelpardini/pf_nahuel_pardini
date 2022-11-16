@@ -296,11 +296,10 @@ figure.home-photo.hover:before {
 
 /* Dance Videos End */
 /* Dance Carousel */
-section {
-  background: #ffffff;
-  padding: 50px 0;
-}
-
+/* section {
+    background: #ffffff;
+    padding: 50px 0;
+} */
 .container {
   max-width: 1044px;
   margin: 0 auto;
