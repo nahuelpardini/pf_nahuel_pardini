@@ -1,5 +1,8 @@
 $color-underline: #462d68;
 
+#navbarNavDropdown{
+	justify-content: end;
+}
 
 .navbar {
 	background: #000000;
@@ -46,7 +49,7 @@ $color-underline: #462d68;
 		width: 0px;
 		height: 2px;
 		background: #462d68;
-		transition: 1;
+		transition: 1s;
 	}
 	&:hover {
 		&::after {
@@ -94,3 +97,5 @@ $color-underline: #462d68;
 		}
 	}
 }
+
+
