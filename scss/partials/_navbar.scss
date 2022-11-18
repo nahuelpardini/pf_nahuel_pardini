@@ -35,7 +35,7 @@ $color-underline: #462d68;
 		transition: 1s;
         
 	}
-	&:hover {
+	&:active {
 		&::after {
 			width: 100%;
 		}
@@ -88,7 +88,7 @@ $color-underline: #462d68;
 			}
 		}
 		.nav-link {
-			&:focus {
+			&:active {
 				color: color-underline;
 			}
 			&:hover {
