@@ -11,3 +11,18 @@ $font-family_1: 'Michroma', sans-serif;
     font-size: 20px;
     max-width: 70%;
 }
+
+.fade-in-text {
+	font-family: 'Raleway', sans-serif;
+	font-size: 20px;
+	animation: fadeIn 5s;
+}
+
+.vp-size{
+	min-height: 55vh;
+}
+
+@keyframes fadeIn {
+	0% { opacity: 0; }
+	100% { opacity: 1; }
+}
