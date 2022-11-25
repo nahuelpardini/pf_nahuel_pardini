@@ -1,8 +1,4 @@
 @charset "UTF-8";
-/* Music Videos */
-@import url(https://fonts.googleapis.com/css?family=Roboto+Condensed:700);
-/* Dance Videos */
-@import url(https://fonts.googleapis.com/css?family=Roboto+Condensed:700);
 body {
   padding: 0px;
   margin: 0px;
@@ -32,11 +28,12 @@ body {
 
 /* Main Section End */
 /* News Section */
-.home-news div {
+.home-news .news-title {
   font-family: "Michroma", regular;
+  font-size: 25px;
 }
-.home-news div .dae-in-text {
-  animation: fadeIn 7s;
+.home-news .news-title .dae-in-text {
+  animation: fadeIn 9s;
 }
 .home-news .home-news-p-text {
   font-family: "Raleway", sans-serif;
@@ -59,7 +56,7 @@ body {
   background: #462d68;
   transition: 1s;
 }
-.navbar-brand:hover::after {
+.navbar-brand:hover::before {
   width: 100%;
 }
 
@@ -134,6 +131,7 @@ body {
   max-width: 70%;
 }
 
+/* Music Videos */
 .music-title {
   text-decoration-color: #ffffff;
   font-size: 25px;
@@ -186,136 +184,56 @@ body {
 }
 
 /* Dance Photo Box */
-html, body, div, span, applet, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-a, abbr, acronym, address, big, cite, code,
-del, dfn, em, img, ins, kbd, q, s, samp,
-small, strike, strong, sub, sup, tt, var,
-b, u, i, center,
-dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed,
-figure, figcaption, footer, header, hgroup,
-menu, nav, output, ruby, section, summary,
-time, mark, audio, video {
-  margin: 0;
-  padding: 0;
-  border: 0;
-  font-size: 100%;
-  font: inherit;
-  vertical-align: baseline;
-}
-
-body {
-  background-color: white;
-}
-
-header {
-  width: 100%;
-  background-color: #77cdb4;
+.container {
+  display: block;
+  max-width: 800px;
+  margin: 0 auto;
   text-align: center;
 }
-
-h1 {
-  font-family: "Roboto Condensed", sans-serif;
-  color: #FFF;
-  font-size: 2.3em;
+.container a {
+  text-decoration: none;
 }
 
-em {
-  color: #232027;
-}
-
-.wrapper {
-  width: 40%;
-  margin: 40px auto;
-}
-
-div.gallery {
-  margin-top: 30px;
-}
-
-div.gallery ul {
-  list-style-type: none;
-  margin-left: 30px;
-}
-
-/* animation */
-div.gallery ul li, div.gallery li img {
-  -webkit-transition: all 0.1s ease-in-out;
-  -moz-transition: all 0.1s ease-in-out;
-  -o-transition: all 0.1s ease-in-out;
-  transition: all 0.1s ease-in-out;
-}
-
-div.gallery ul li {
-  position: relative;
-  float: left;
-  width: 130px;
-  height: 130px;
-  margin: 5px;
-  padding: 5px;
-  z-index: 0;
-}
-
-/* Make sure z-index is higher on hover */
-/* Ensure that hover image overlapped the others */
-div.gallery ul li:hover {
-  z-index: 5;
-}
-
-/* Image is position nicely under li */
-div.gallery ul li img {
-  position: absolute;
+.small {
+  height: 180px;
+  width: 180px;
   object-fit: cover;
-  left: 0;
-  top: 0;
-  border: 1px solid #dddddd;
-  padding: 5px;
-  width: 130px;
-  height: 130px;
-  background: #f0f0f0;
+  height: auto;
+  position: relative;
+  margin: 3px;
+  border-radius: 5px;
+}
+.small:hover {
+  -webkit-transform: scale(1.05, 1.05);
+  transform: scale(1.05, 1.05);
 }
 
-div.gallery ul li img:hover {
+.lightbox {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1;
   width: 200px;
   height: 200px;
-  margin-top: -130px;
-  margin-left: -130px;
-  top: 65%;
-  left: 65%;
+  background: rgba(0, 0, 0, 0.7);
+}
+.lightbox:target {
+  display: -webkit-box;
+  display: flex;
+  justify-content: center;
+  max-width: 300px;
+  max-height: 300px;
 }
 
-p.attribution {
-  font-family: "Consolas";
-  color: #000;
-  clear: both;
-  text-align: center;
-  line-height: 25px;
-  padding-top: 30px;
+a div {
+  justify-content: center;
+  max-width: 300px;
+  max-height: 300px;
 }
 
-p.attribution a {
-  color: #4c8d7c;
-}
-
-/* Responsive hack */
-@media only screen and (min-width: 499px) and (max-width: 1212px) {
-  .wrapper {
-    width: 500px;
-  }
-}
-@media only screen and (max-width: 498px) {
-  .wrapper {
-    width: 300px;
-  }
-  div.gallery ul {
-    list-style-type: none;
-    margin: 0;
-  }
-}
 /* Dance Photo Box End */
+/* Dance Videos */
 .dance-videos-title {
   text-decoration-color: white;
   font-size: 25px;
@@ -376,141 +294,65 @@ p.attribution a {
 
 /* Dance Videos End */
 /* Dance Photo Box */
-html, body, div, span, applet, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-a, abbr, acronym, address, big, cite, code,
-del, dfn, em, img, ins, kbd, q, s, samp,
-small, strike, strong, sub, sup, tt, var,
-b, u, i, center,
-dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed,
-figure, figcaption, footer, header, hgroup,
-menu, nav, output, ruby, section, summary,
-time, mark, audio, video {
-  margin: 0;
-  padding: 0;
-  border: 0;
-  font-size: 100%;
-  font: inherit;
-  vertical-align: baseline;
-}
-
-body {
-  background-color: white;
-}
-
-header {
-  width: 100%;
-  background-color: #77cdb4;
+.container {
+  display: block;
+  max-width: 800px;
+  margin: 0 auto;
   text-align: center;
 }
-
-h1 {
-  font-family: "Roboto Condensed", sans-serif;
-  color: #FFF;
-  font-size: 2.3em;
+.container a {
+  text-decoration: none;
 }
 
-em {
-  color: #232027;
-}
+/* img {
 
-.wrapper {
-  width: 40%;
-  margin: 40px auto;
-}
-
-div.gallery {
-  margin-top: 30px;
-}
-
-div.gallery ul {
-  list-style-type: none;
-  margin-left: 30px;
-}
-
-/* animation */
-div.gallery ul li, div.gallery li img {
-  -webkit-transition: all 0.1s ease-in-out;
-  -moz-transition: all 0.1s ease-in-out;
-  -o-transition: all 0.1s ease-in-out;
-  transition: all 0.1s ease-in-out;
-}
-
-div.gallery ul li {
-  position: relative;
+    background-size: cover;
+    position: relative;
+    left: 25%;
+    display: flex;
+    flex-flow: row;
+    width: 100%;
+    height: 100%;
+} */
+.small {
   float: left;
-  width: 130px;
-  height: 130px;
-  margin: 5px;
-  padding: 5px;
-  z-index: 0;
+  height: 12em;
+  margin: 0.2em 1em 1em 0;
+  overflow: hidden;
+  width: 12em;
+}
+.small:hover {
+  -webkit-transform: scale(1.05, 1.05);
+  transform: scale(1.05, 1.05);
+}
+.small a img {
+  margin: 220px 0 0 210px;
+  padding: 6em 0 0 6em;
 }
 
-/* Make sure z-index is higher on hover */
-/* Ensure that hover image overlapped the others */
-div.gallery ul li:hover {
-  z-index: 5;
-}
-
-/* Image is position nicely under li */
-div.gallery ul li img {
-  position: absolute;
-  object-fit: cover;
-  left: 0;
+.lightbox {
+  display: none;
+  position: fixed;
   top: 0;
-  border: 1px solid #dddddd;
-  padding: 5px;
-  width: 130px;
-  height: 130px;
-  background: #f0f0f0;
+  left: 0;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.7);
+}
+.lightbox:target {
+  display: -webkit-box;
+  display: flex;
+  justify-content: center;
+  max-width: 80%;
+  max-height: 80%;
+}
+.lightbox .lightbox a img {
+  margin: 220px 0 0 210px;
+  padding: 6em 0 0 6em;
 }
 
-div.gallery ul li img:hover {
-  width: 200px;
-  height: 200px;
-  margin-top: -130px;
-  margin-left: -130px;
-  top: 65%;
-  left: 65%;
-}
-
-p.attribution {
-  font-family: "Consolas";
-  color: #000;
-  clear: both;
-  text-align: center;
-  line-height: 25px;
-  padding-top: 30px;
-}
-
-p.attribution a {
-  color: #4c8d7c;
-}
-
-/* Responsive hack */
-@media only screen and (min-width: 499px) and (max-width: 1212px) {
-  .wrapper {
-    width: 500px;
-  }
-}
-@media only screen and (max-width: 498px) {
-  .wrapper {
-    width: 300px;
-  }
-  div.gallery ul {
-    list-style-type: none;
-    margin: 0;
-  }
-}
 /* Dance Photo Box End */
-/* 
-width: 100%;
-    height: 80px;
-    object-fit: contain; */
-/* Dance Carousel */
 .upcomingEvents-title {
   text-decoration-color: #ffffff;
   font-size: 25px;
@@ -656,7 +498,6 @@ textarea:valid ~ label {
 }
 
 .submit-btn {
-  float: right;
   padding: 7px 35px;
   border-radius: 60px;
   display: inline-block;
@@ -669,8 +510,9 @@ textarea:valid ~ label {
   transition: all 300ms ease;
 }
 .submit-btn:hover {
-  transform: translateY(1px);
-  box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.1), 0 1px 1px 0 rgba(0, 0, 0, 0.09);
+  transform: translateY(3px);
+  color: white;
+  box-shadow: 0 3px 3px 0 rgba(0, 0, 0, 0.733), 0 1px 1px 0 rgba(0, 0, 0, 0.09);
 }
 
 input[type=checkbox] + label {
@@ -694,21 +536,8 @@ input[type=checkbox]:checked + label {
     text-align: center;
   }
 }
-footer {
-  display: inline-block;
-  background: #ccc;
-  height: 120px;
-  text-align: center;
-  font-size: 15px;
-  font-weight: 700;
-  text-decoration: underline;
-  left: 0;
-  bottom: 0;
-  width: 100%;
-}
-
 .footer-distribution {
-  background-color: #292c2f;
+  background-color: #000000;
   box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.12);
   box-sizing: border-box;
   width: 100%;
@@ -759,7 +588,7 @@ footer {
   display: inline-block;
   width: 35px;
   height: 35px;
-  background-color: #292c2f;
+  background-color: #000000;
   border-radius: 2px;
   font-size: 20px;
   color: #ffffff;
@@ -769,8 +598,8 @@ footer {
   transition: all 0.25s;
 }
 .footer-distribution .footer-right a:hover {
-  transform: scale(1.1);
   -webkit-transform: scale(1.1);
+  transform: scale(1.1);
 }
 
 @media (max-width: 600px) {
