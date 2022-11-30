@@ -56,56 +56,10 @@ $font-family_1: 'Michroma', sans-serif;
 
 /* Dance Photo Box */
 
-$color_1: white;
 
-.container {
-	display: block;
-	max-width: 800px;
-	margin: 0 auto;
-	text-align: center;
-	a {
-		text-decoration: none;
-	}
-}
-.small {
-	height: 180px;
-    width: 180px;
-    object-fit: cover;
-	height: auto;
-	position: relative;
-	margin: 3px;
-	border-radius: 5px;
-	&:hover {
-		-webkit-transform: scale(1.05, 1.05);
-		transform: scale(1.05, 1.05);
-	}
-}
-.lightbox {
-	display: none;
-	position: fixed;
-	top: 0;
-	left: 0;
-	z-index: 1;
-	width: 200px;
-	height: 200px;
-	background: rgba(0, 0, 0, 0.7);
-	&:target {
-		display: -webkit-box;
-		display: flex;
-        justify-content: center;
-        max-width: 300px;
-        max-height: 300px;
-        
-	}
-}
-a {
-	div {
-		justify-content: center;
-        max-width: 300px;
-        max-height: 300px;
-        
-	}
-}
+
+
+
 
 
 /* Dance Photo Box End */

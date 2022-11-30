@@ -2,6 +2,7 @@
 body {
   padding: 0px;
   margin: 0px;
+  color: white;
 }
 
 @keyframes fadeIn {
@@ -13,23 +14,130 @@ body {
   }
 }
 /* Main Section */
-.main-photo {
-  width: 100%;
-  height: 80%;
+.mainphoto {
+  font-family: "Raleway", Arial, sans-serif;
+  justify-content: center;
+  object-fit: cover;
+  overflow: hidden;
+  max-width: 90%;
+  max-height: 60%;
+  text-align: center;
+  border-radius: 3px;
+  box-shadow: 0 0 5px rgba(110, 63, 172, 0.2745098039);
 }
-.main-photo .fade-in-image {
-  animation: fadeIn 5s;
+.mainphoto * {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-transition: all 0.6s ease;
+  transition: all 0.6s ease;
 }
-.main-photo .fade-in-image img {
+.mainphoto img {
+  opacity: 1;
   width: 100%;
-  height: 100%;
-  object-fit: contain;
+  display: block;
+}
+.mainphoto figcaption {
+  max-width: 50%;
+  max-height: 50%;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+.mainphoto a {
+  text-decoration: none;
+}
+.mainphoto .bottom-left {
+  justify-content: start;
+  bottom: 5px;
+  opacity: 0;
+  left: 5px;
+  -webkit-transform: translate(-50%, 50%);
+  transform: translate(-50%, 50%);
+}
+.mainphoto .bottom-right {
+  justify-content: end;
+  bottom: 5px;
+  opacity: 0;
+  right: 5px;
+  -webkit-transform: translate(50%, 50%);
+  transform: translate(50%, 50%);
+}
+.mainphoto:hover img {
+  opacity: 0.6;
+  -webkit-transform: scale(1.1);
+  transform: scale(1.1);
+}
+.mainphoto:hover figcaption .bottom-left {
+  -webkit-transform: translate(0, 0);
+  transform: translate(0, 0);
+  opacity: 1;
+}
+.mainphoto:hover figcaption .bottom-right {
+  -webkit-transform: translate(0, 0);
+  transform: translate(0, 0);
+  opacity: 1;
 }
 
+figure.mainphoto.hover img {
+  opacity: 0.6;
+  -webkit-transform: scale(1.1);
+  transform: scale(1.1);
+}
+figure.mainphoto.hover figcaption .bottom-left {
+  -webkit-transform: translate(0, 0);
+  transform: translate(0, 0);
+  opacity: 1;
+}
+figure.mainphoto.hover figcaption .bottom-right {
+  -webkit-transform: translate(0, 0);
+  transform: translate(0, 0);
+  opacity: 1;
+}
+
+/* Btns */
+.btns-main {
+  letter-spacing: 0;
+}
+
+.btns-main:hover,
+.btns-main:active {
+  letter-spacing: 5px;
+}
+
+.btns-main:after,
+.btns-main:before {
+  backface-visibility: hidden;
+  border: 1px solid rgba(255, 255, 255, 0);
+  bottom: 0px;
+  content: " ";
+  display: block;
+  margin: 0 auto;
+  position: relative;
+  transition: all 280ms ease-in-out;
+  width: 0;
+}
+
+.btns-main:hover:after,
+.btns-main:hover:before {
+  backface-visibility: hidden;
+  border-color: #fff;
+  transition: width 350ms ease-in-out;
+  width: 70%;
+}
+
+.btns-main:hover:before {
+  bottom: auto;
+  top: 0;
+  width: 70%;
+}
+
+/* Btns End */
 /* Main Section End */
 /* News Section */
 .home-news .news-title {
   font-family: "Michroma", regular;
+  color: black;
   font-size: 25px;
 }
 .home-news .news-title .dae-in-text {
@@ -37,6 +145,7 @@ body {
 }
 .home-news .home-news-p-text {
   font-family: "Raleway", sans-serif;
+  color: black;
   font-size: 20px;
 }
 
@@ -184,54 +293,6 @@ body {
 }
 
 /* Dance Photo Box */
-.container {
-  display: block;
-  max-width: 800px;
-  margin: 0 auto;
-  text-align: center;
-}
-.container a {
-  text-decoration: none;
-}
-
-.small {
-  height: 180px;
-  width: 180px;
-  object-fit: cover;
-  height: auto;
-  position: relative;
-  margin: 3px;
-  border-radius: 5px;
-}
-.small:hover {
-  -webkit-transform: scale(1.05, 1.05);
-  transform: scale(1.05, 1.05);
-}
-
-.lightbox {
-  display: none;
-  position: fixed;
-  top: 0;
-  left: 0;
-  z-index: 1;
-  width: 200px;
-  height: 200px;
-  background: rgba(0, 0, 0, 0.7);
-}
-.lightbox:target {
-  display: -webkit-box;
-  display: flex;
-  justify-content: center;
-  max-width: 300px;
-  max-height: 300px;
-}
-
-a div {
-  justify-content: center;
-  max-width: 300px;
-  max-height: 300px;
-}
-
 /* Dance Photo Box End */
 /* Dance Videos */
 .dance-videos-title {
