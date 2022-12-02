@@ -73,20 +73,12 @@
     <!-- MAIN -->
 <main>
 
-    <figure class="mainphoto container-fluid">
-        <img class="row col-12 col-mg-12 col-lg-12 col-xl-12" src="./img/home-img/barbiDance.jpg" alt="homephoto"/>
-        <figcaption>
-            <button class="btns-main music-btn bottom-left" onclick="window.location.href='./pages/music.html';">Music </button>
-                
+    <figure id="cf2" class="mainphoto container-fluid shadow">
+        <img class="bottom row col-12 col-mg-12 col-lg-12 col-xl-12" src="./img/home-img/plain-black-background.jpg" alt="homephoto"/>
+        <img class="top row col-12 col-mg-12 col-lg-12 col-xl-12" src="./img/home-img/barbiDance.jpg" alt="homephoto"/>
         
-            <button class="btns-main dance-btn bottom-right" onclick="window.location.href='./pages/dance.html';">Dance </button>
-                
-        
-        
-
-        </figcaption>
     </figure>
-
+    
 
 
 
@@ -150,6 +142,12 @@
     <!-- JavaScript Bundle with Popper -->
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.min.js" integrity="sha384-IDwe1+LCz02ROU9k972gdyvl+AESN10+x7tBKgc9I5HFtuNz0wWnPclzo6p9vxnk" crossorigin="anonymous"></script>
-    
+    <script>
+        $(document).ready(function() {
+  $("#cf_onclick").click(function() {
+  $("#cf2 img.top").toggleClass("transparent");
+});
+});
+    </script>
 </body>
 </html>
