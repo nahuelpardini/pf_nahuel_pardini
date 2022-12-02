@@ -13,22 +13,76 @@ body {
   }
 }
 /* Main Section */
-.mainphoto {
+.main-photos {
+  display: grid;
+  grid-gap: 20px;
+  padding: 40px;
+  grid: 300px 300px/1fr;
+}
+@media (min-width: 700px) {
+  .main-photos {
+    grid: 400px 400px/1fr 1fr;
+  }
+}
+
+.image {
+  border-radius: 5px;
+  background-color: #2d2d2d;
+  background-size: cover;
+  background-position: center center;
   position: relative;
-  height: 281px;
-  width: 450px;
-  margin: 0 auto;
+  display: block;
+  overflow: hidden;
 }
-.mainphoto img {
+.image:before {
+  content: "";
   position: absolute;
-  left: 0;
-  -webkit-transition: opacity 1s ease-in-out;
-  -moz-transition: opacity 1s ease-in-out;
-  -o-transition: opacity 1s ease-in-out;
-  transition: opacity 1s ease-in-out;
-}
-.mainphoto img.transparent {
+  width: 104%;
+  height: 104%;
+  top: -2%;
+  left: -2%;
+  background: hsl(210deg, 80%, 5%);
   opacity: 0;
+  transition: 300ms ease-in-out;
+  transition-property: opacity;
+  will-change: opacity;
+}
+.image .content {
+  opacity: 0;
+  transition: 300ms ease-in-out 100ms;
+  transition-property: transform opacity;
+  transform: translateY(15%);
+  will-change: transform;
+}
+.image:hover {
+  cursor: pointer;
+}
+.image:hover .content {
+  opacity: 1;
+  transform: translateY(0%);
+}
+.image:hover:before {
+  opacity: 0.6;
+}
+
+.content {
+  color: white;
+  font-family: "Raleway", sans-serif;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+}
+.content .text {
+  padding: 20px;
+}
+.content .title {
+  margin: 0 0 10px 0;
+  font-weight: 300;
+  font-size: 1.5em;
+  max-width: 300px;
+}
+.content .name {
+  opacity: 0.8;
 }
 
 /* Main Section End */
@@ -45,6 +99,69 @@ body {
   font-family: "Raleway", sans-serif;
   color: black;
   font-size: 20px;
+}
+
+button {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translateX(-50%) translateY(-50%);
+}
+
+button {
+  background: #333;
+  color: #ccc;
+  width: 200px;
+  height: 60px;
+  border: 0;
+  font-size: 18px;
+  border-radius: 4px;
+  font-family: "Michroma", regular;
+  transition: 0.6s;
+  overflow: hidden;
+}
+button:focus {
+  outline: 0;
+}
+button:before {
+  content: "";
+  display: block;
+  position: absolute;
+  background: rgba(255, 255, 255, 0.5);
+  width: 60px;
+  height: 100%;
+  left: 0;
+  top: 0;
+  opacity: 0.5;
+  filter: blur(30px);
+  transform: translateX(-100px) skewX(-15deg);
+}
+button:after {
+  content: "";
+  display: block;
+  position: absolute;
+  background: rgba(255, 255, 255, 0.2);
+  width: 30px;
+  height: 100%;
+  left: 30px;
+  top: 0;
+  opacity: 0;
+  filter: blur(5px);
+  transform: translateX(-100px) skewX(-15deg);
+}
+button:hover {
+  background: rgba(90, 69, 126, 0.7490196078);
+  cursor: pointer;
+}
+button:hover:before {
+  transform: translateX(300px) skewX(-15deg);
+  opacity: 0.6;
+  transition: 0.7s;
+}
+button:hover:after {
+  transform: translateX(300px) skewX(-15deg);
+  opacity: 1;
+  transition: 0.7s;
 }
 
 #navbarNavDropdown {
