@@ -19,7 +19,7 @@ $color-underline: #462d68;
 		transition: 1s;
 	}
 	&:hover {
-		&::after {
+		&::before {
 			width: 100%;
 		}
 	}
